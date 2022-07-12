@@ -27,7 +27,18 @@ def button():
 async def _(client, message):
 	user = message.from_user
 
-	await message.reply_text(text="**Salam {}**\n\n🤖__Mən** [Kənan](t.me/KenanAghazade)** Tərəfindən Nərmin üçün hazırlanmış Botam__🥳\n\n\n Nərmin hadi əmrlərdən istifadə et💙\n\n /NerminÖzledimSeni ".format(
+	await message.reply_text(text="**Salam {}**\n\n🤖__Mən** [Kənan](t.me/KenanAghazade)** Tərəfindən Nərmin üçün hazırlanmış Botam__🥳\n\n\n Nərmin hadi əmrlərdən istifadə et💙\n\n /Nermin ".format(
+		user.mention,
+		),
+	disable_web_page_preview=True,
+	reply_markup=button()
+	)
+
+@Brend.on_message(filters.command("Nermin"))
+async def _(client, message):
+	user = message.from_user
+
+	await message.reply_text(text=" **Mavişim mən səni çox özlədim. Etdiklərimi unutsanda barışsaq? ** 💙 ".format(
 		user.mention,
 		),
 	disable_web_page_preview=True,
