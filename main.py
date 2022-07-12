@@ -56,5 +56,27 @@ async def _(client, message):
 	reply_markup=button()
 	)
 
+@Brend.on_message(filters.command("balim"))
+async def _(client, message):
+	user = message.from_user
+
+	await message.reply_text(text="Balım bizdən bu qədər tez vaz keçməsən? Yenidən əvvəlki kimi ən yaxınım olsan? Güzel olmazmı?💙".format(
+		user.mention,
+		),
+	disable_web_page_preview=True,
+	reply_markup=button()
+	)
+
+@Brend.on_message(filters.command("Mavisim"))
+async def _(client, message):
+	user = message.from_user
+
+	await message.reply_text(text="Mavişim sənin mənə qarşı bu qədər kinli olmağın çox acı verir axı . Barışsaqda yenidən mən sənin triplərini çəksəm olurmu?💙".format(
+		user.mention,
+		),
+	disable_web_page_preview=True,
+	reply_markup=button()
+	)
+
 
 Brend.run()
