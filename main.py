@@ -1,7 +1,7 @@
 import os
 import logging
 import random
-from sorular import D_LİST, C_LİST
+from sorular import 12, 13
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
@@ -49,8 +49,8 @@ async def _(client, message):
 
 @Brend.on_callback_query()
 async def _(client, callback_query):
-	d_soru=random.choice(💙)
-	c_soru=random.choice(🖤)
+	d_soru=random.choice(12)
+	c_soru=random.choice(13)
 	user = callback_query.from_user
 
 	c_q_d, user_id = callback_query.data.split()
@@ -102,8 +102,8 @@ async def _(client, message):
 @Brend.on_message(filters.private)
 async def _(client, message):
   global MOD
-  global C_LİST
-  global D_LİST
+  global 13
+  global 12
   
   user = message.from_user
   
