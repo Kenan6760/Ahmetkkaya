@@ -19,8 +19,8 @@ logging.basicConfig(level=logging.INFO)
 Brend = Client("Pyrogram Bot", bot_token=B_TOKEN, api_id=API_ID, api_hash=API_HASH)
 
 def button():
-	BUTTON=[[InlineKeyboardButton(text="👨🏻‍💻 Sahibim ",url="t.me/KenanAghazade")]]
-	BUTTON+=[[InlineKeyboardButton(text="🤖 Əsas Kanalımız",url="t.me/KenaninMavishi")]]
+	BUTTON=[[InlineKeyboardButton(text="Mavi Kalp💙",url="t.me/Mavish_19")]]
+	BUTTON+=[[InlineKeyboardButton(text="💙İkimizin Kanalı💙",url="t.me/KenaninMavishi")]]
 	return InlineKeyboardMarkup(BUTTON)
 
 @Brend.on_message(filters.command("start"))
@@ -40,9 +40,6 @@ async def _(client, message):
 
 	await message.reply_text(text=" **Mavişim mən səni çox özlədim. Etdiklərimi unutsanda barışsaq? ** 💙 ".format(
 		user.mention,
-		),
-	disable_web_page_preview=True,
-	reply_markup=button()
-	)
+		)
 
 Brend.run()
