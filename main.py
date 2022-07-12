@@ -27,7 +27,7 @@ def button():
 async def _(client, message):
 	user = message.from_user
 
-	await message.reply_text(text="**Salam {}**\n\n🤖__Mən** [Kənan](t.me/KenanAghazade)** Tərəfindən Nərmin üçün hazırlanmış Botam__🥳\n\n\n Nərmin hadi əmrlərdən sırayla istifadə et💙\n\n /Nermin \n/Canim \n/Balim \n/Mavisim ".format(
+	await message.reply_text(text="**Salam {}**\n\n🤖__Mən** [Kənan](t.me/KenanAghazade)** **Tərəfindən Nərmin üçün hazırlanmış Botam__🥳**\n\n\n**Nərmin hadi əmrlərdən sırayla istifadə et💙**\n\n/Nermin \n/Canim \n/Balim \n/Mavisim ".format(
 		user.mention,
 		),
 	disable_web_page_preview=True,
