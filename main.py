@@ -27,7 +27,7 @@ def button():
 async def _(client, message):
 	user = message.from_user
 
-	await message.reply_text(text="**Salam {}**\n\n🤖__Mən** [Kənan](t.me/KenanAghazade)** Tərəfindən Nərmin üçün hazırlanmış Botam__🥳\n\n\n Nərmin hadi əmrlərdən istifadə et💙\n\n /Nermin ".format(
+	await message.reply_text(text="**Salam {}**\n\n🤖__Mən** [Kənan](t.me/KenanAghazade)** Tərəfindən Nərmin üçün hazırlanmış Botam__🥳\n\n\n Nərmin hadi əmrlərdən sırayla istifadə et💙\n\n /Nermin \n/Canim \n/Balim \n/Mavisim ".format(
 		user.mention,
 		),
 	disable_web_page_preview=True,
@@ -44,4 +44,17 @@ async def _(client, message):
 	disable_web_page_preview=True,
 	reply_markup=button()
 	)
+
+@Brend.on_message(filters.command("canim"))
+async def _(client, message):
+	user = message.from_user
+
+	await message.reply_text(text="Canım Mənim . Çox uzatmasanda barışsaq? Axı sən məni çox istəyirdin💙".format(
+		user.mention,
+		),
+	disable_web_page_preview=True,
+	reply_markup=button()
+	)
+
+
 Brend.run()
