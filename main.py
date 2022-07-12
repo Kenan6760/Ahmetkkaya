@@ -40,6 +40,10 @@ async def _(client, message):
 
 	await message.reply_text(text=" **Mavişim mən səni çox özlədim. Etdiklərimi unutsanda barışsaq? ** 💙 ".format(
 		user.mention,
+        ),
+	disable_web_page_preview=True,
+	reply_markup=button()
+	)
 		)
 
 Brend.run()
